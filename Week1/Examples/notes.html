@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Example of attribute selector</title>
+  <style>
+     [title] {
+        color:green;
+    }
+    p[lang|=en] {
+          	background: blue;
+    }
+     [class*="warning"] {
+         color : red;
+    }
+    div p {
+  background-color: red;
+  font-family: Arial;
+}
+
+div:hover {
+  background-color: blue;
+}
+
+  </style>
+</head>
+<body>
+  <p title="heading">It is an example for CSS [attribute] Selector</p>
+  <p lang="en">It is an example for  CSS [attribute|="value"] Selector</p>
+  <p class="alert_warning">It is an example for CSS [attribute*="value"] Selector</p>
+
+  <div>
+<h3>Not me!</h3>
+  <p>I'll match, </p>
+  <section><p> I'll match! </p></section>
+  <p>I'll match, </p>
+</div>
+<p>I'm not in a div.</p>
+
+
+
+</head>
+
+<div>Mouse Over Me</div>
+
+</body>
+</html> 
