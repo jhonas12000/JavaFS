@@ -1,5 +1,6 @@
 <!DOCTYPE html> <!-- This declares this file will be an html doc-->
 <html lang="en">
+
 <head> <!-- the head tag contains all the metadata that this html file will use-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,34 @@
     <style>
         /* this is an example of id selector in CSS */
         #add-red {
-            color:red ;
+            color: red;
         }
 
         /* This is an example of a class selector in CSS */
         .add-blue {
-            color:blue;
+            color: blue;
+        }
+
+        /* This is an example of an element selector in CSS */
+        p {
+            color: blueviolet
         }
     </style>
+    <style>
+        .add-tur {
+            color: turquoise;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- Body tag contains all the content this html should display in your browser-->
+
 <body>
     <!-- Heading tag is used to display titles or subtitles (h1 to h6)-->
-     <h1>Introduction to HTML</h1>
-     <h6>Tiny Heading</h6>
+    <h1>Introduction to HTML</h1>
+    <h6>Tiny Heading</h6>
 
-     <!-- div tags are just the way to group tags together and it is used for organization-->
+    <!-- div tags are just the way to group tags together and it is used for organization-->
     <div>
         Divs are generic block elements that are used to separate a section in an HTML document
         <div>
@@ -48,17 +61,17 @@
     </div>
     <!-- Semantic tags are used to group things together like a div but it tells the developer what the group is for 
      in more detail-->
-     <article>
+    <article>
         <h2>Article Tag</h2>
         <p>This is an article tag. It is used to group content that makes up an article or a section of a website.
             It is more specific than a div tag and it helps developers understand what the purpose of this section is.
         </p>
-     </article>
-     <!-- Another semantic tag that is more useful/more used that group an entire table together-->
-      <h3>
+    </article>
+    <!-- Another semantic tag that is more useful/more used that group an entire table together-->
+    <h3>
         Table structure
-      </h3>
-      <table>
+    </h3>
+    <table>
         <thead>
             <tr>
                 <th>Name</th>
@@ -78,8 +91,8 @@
                 <td>5</td>
             </tr>
         </tbody>
-      </table>
-      <div>
+    </table>
+    <div>
         <h3>Lists</h3>
         <h4>Ordered List</h4>
         <ol>
@@ -91,15 +104,15 @@
             <li>Denoted by ul</li>
             <li>Use unordered list if sequence does not matter</li>
         </ul>
-      </div>
-      <!--Image tag will display an image in your website-->
-      <!--it needs html attributes to configure what image to use (src)-->
-      <!--img element is a self closing element meaning you don't do </img> mostly because
+    </div>
+    <!--Image tag will display an image in your website-->
+    <!--it needs html attributes to configure what image to use (src)-->
+    <!--img element is a self closing element meaning you don't do </img> mostly because
       it doesn't make sense to use img tag to group things together-->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Wankaner-palace.png">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Wankaner-palace.png">
 
-      <h3>Introduction to CSS</h3>
-      <!--CSS Specificity
+    <h3>Introduction to CSS</h3>
+    <!--CSS Specificity
       * This will determine what style should apply to a particular element(s) because sometimes
       stylings conflict with each other
       * General Rule:
@@ -109,12 +122,19 @@
         4. element selector - least specific will have lowest priority
       -->
 
-      <div>
+    <div>
         <p id="add-red" style="color:chocolate">This is an example of id selector</p>
         <p id="add-red" class="add-blue">This is an example of a class selector</p>
         <p class="add-blue">This is an example of a class selector</p>
-        <p
+        <p> This is an example of element selector</p>
 
-      </div>
+        <p class="add-green"> This is an example of external css being applied</p>
+
+        <h3>Specificity</h3>
+        <div>
+            <p class="add-blue add-tur">Paragraph 1</p>
+            <p class="add-tur add-blue">Paragraph 2</p>
+        </div>
 </body>
+
 </html>
