@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro2Web</title>
+    <style>
+        /* this is an example of id selector in CSS */
+        #add-red {
+            color:red ;
+        }
+
+        /* This is an example of a class selector in CSS */
+        .add-blue {
+            color:blue;
+        }
+    </style>
 </head>
 <!-- Body tag contains all the content this html should display in your browser-->
 <body>
@@ -89,7 +100,21 @@
 
       <h3>Introduction to CSS</h3>
       <!--CSS Specificity
-      * This will determine
+      * This will determine what style should apply to a particular element(s) because sometimes
+      stylings conflict with each other
+      * General Rule:
+        1. Inline Styles (inside an element) - most specific will have highest priority
+        2. ID selector - will have high priority
+        3. class selector - will have second priority
+        4. element selector - least specific will have lowest priority
       -->
+
+      <div>
+        <p id="add-red" style="color:chocolate">This is an example of id selector</p>
+        <p id="add-red" class="add-blue">This is an example of a class selector</p>
+        <p class="add-blue">This is an example of a class selector</p>
+        <p
+
+      </div>
 </body>
 </html>
