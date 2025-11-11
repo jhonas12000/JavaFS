@@ -1,0 +1,1 @@
+console.log("=====================(Printing and Declaring stuff")
