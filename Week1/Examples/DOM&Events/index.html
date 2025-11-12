@@ -10,6 +10,9 @@
     <button onclick="clickEventListener()">Change to your name</button>
 
     <button onclick="addYourNameListener()">Click me to add more Your Name</button>
+    <ul id="addmore">
+
+    </ul>
 
     <!-- <h3>Bubbling Event</h3>
     <div style="border: 2px solid red;" onclick="alert('div was clicked')">
@@ -57,6 +60,21 @@
 
         //changing content to William Terry
         paragEle.innerHTML = "William Terry";
+    }
+
+    function addYourNameListener () {
+
+        let unorderedList = document.querySelector("#addmore");
+
+        //We have to create the object version of what we want to add
+        let list = document.createElement("li");
+
+        list.innerHTML = "William Terry"
+
+        //Append is used to add list items
+        unorderedList.append(list)
+
+
     }
 
 </script>
