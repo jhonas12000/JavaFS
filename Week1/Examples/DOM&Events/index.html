@@ -20,6 +20,15 @@
         </p>
     </div>
 
+    <h3>Capturing Event</h3>
+    <div id="divCapture" style="border:2px solid red;">
+        div element
+        <p style = "border: 2px solid darkblue;">
+            paragraph element
+            <span style = "border: 2px solid darkorange">span element</span>
+        </p>
+    </div>
+
 </body>
 <script>
     //This is another way to add JS into your HTML using script tag
@@ -28,6 +37,14 @@
     console.log("Hello World");
 
     //Attaching onclick event to div, p and span and changing default behavior to capturing instead
-    //let div = document.querySelector
+    let div = document.querySelector("#divCapture")
+
+    //First param, what event should it listen to
+    //second param, give me a function that should be executed if this event happened
+    //third param, do you want a capturing behavior
+
+    div.addEventListener("click",()=>{alert("div was clicked")},true);
+    
+
 </script>
 </html>
