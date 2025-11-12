@@ -14,6 +14,15 @@
 
     </ul>
 
+    <button onclick="displayTheChild()">Show me the nodes</button>"
+    <ol id="ol">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+
     <!-- <h3>Bubbling Event</h3>
     <div style="border: 2px solid red;" onclick="alert('div was clicked')">
         div element
@@ -75,6 +84,18 @@
         unorderedList.append(list)
 
 
+    }
+
+    function displayTheChild(){
+        //DOM traversing
+
+        let orderList = document.querySelector("#ol")
+
+        console.log(orderList.childNodes);
+        condole.log(orderList.parentNode);
+
+        //Selecting Item 3 using DOM traversal
+        console.log(orderList.childNodes[5].innherHTML)
     }
 
 </script>
