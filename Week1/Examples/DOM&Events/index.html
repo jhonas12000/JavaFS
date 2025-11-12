@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src = "JSclasses.js">      
 
     </script>
@@ -44,6 +46,19 @@
             paragraph element
             <span style="border: 2px solid darkorange">span element</span>
         </p>
+    </div>
+
+    <h2>Using Fetch to grab a pokemon and displaying it!</h2>
+
+    <div class="mb-3" style="margin-left:1rem; margin-right:50%;">
+        <label>Pokemon Name</label>
+        <input id="pokemon" class="form-control">
+    </div>
+    <button style = "margin-left:1rem;" class="btn btn-primary" onclick="getPokemon()">Submit</button>
+
+    <h3>Result</h3>
+    <div id="result">
+        
     </div>
 
 </body>
