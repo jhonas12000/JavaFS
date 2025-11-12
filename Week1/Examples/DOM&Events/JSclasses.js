@@ -24,6 +24,19 @@
         }
        }).then(jsObject=>{
         console.log(jsObject)
+
+        document.querySelector("#result").innerHTML="";
+
+        let paragraphId= document.createElement("p");
+        paragraphId.innerHTML = `Id: ${jsObject.id}\nName:${jsObject.name}`
+
+        let image = document.createElement("img");
+        image.src = jsObject.sprites.front_default;
+
+        document.querySelector("#result").append(paragraphId);
+        document.querySelector("#result").append(image);
+
+        
        })
        //catch specifically for fetch will only catch if it grabs a 4XX or 5XX status code
        .catch(error=> {
