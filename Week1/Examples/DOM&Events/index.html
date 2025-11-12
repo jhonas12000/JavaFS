@@ -14,7 +14,7 @@
 
     </ul>
 
-    <button onclick="displayTheChild()">Show me the nodes</button>"
+    <button onclick="displayTheChild()">Show me the nodes</button>
     <ol id="ol">
         <li>Item 1</li>
         <li>Item 2</li>
@@ -92,10 +92,13 @@
         let orderList = document.querySelector("#ol")
 
         console.log(orderList.childNodes);
-        condole.log(orderList.parentNode);
+        console.log(orderList.parentNode);
 
+        
+        console.log(orderList.childNodes)
+        console.log("all child nodes listed above")
         //Selecting Item 3 using DOM traversal
-        console.log(orderList.childNodes[5].innherHTML)
+        console.log(orderList.childNodes[5].innerHTML)
     }
 
 </script>
