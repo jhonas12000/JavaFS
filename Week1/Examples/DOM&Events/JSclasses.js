@@ -1,3 +1,44 @@
+    function getPokemon(){
+        //I need to grab the pokemon name the user wants to search for
+        let pokename = document.querySelector("#pokename").value;
+        
+        //Interacting with your backend api
+        //By default, fetch will use GET as its type of request
+        //You can change the request method by adding a second parameter in your fetch
+        //This second parameter needs an object and it needs a method property
+        //JSON = JS Object
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokename}`,{method:"GET"})
+        /*
+        Then, catch, finally is very similar to try, catch, finally in Java error handling
+        They also have similar functionalities
+        Get the result from this endpoint and convert it to a JS object
+        */
+       .then(result=>{
+        if(result.status == 404){
+            throw new Error("Pokemon not found")
+        }else if(result.status==500){
+            throw new Error("Please wait a moment. Server is in maintenance")
+        }else{
+            return result.json();
+        }
+       }).then(jsObject=>{
+        console.log(jsObject)
+       })
+       //catch specifically for fetch will only catch if it grabs a 4XX or 5XX status code
+       .catch(error=> {
+        //Change your website dynamically to tell the user something went wrong
+        document.querySelector("#result").innerHTML="";
+
+       })
+       .finally(()=>{
+        
+       })
+    }
+    
+    
+    
+    
+    
     //This is another way to add JS into your HTML using script tag
     //Usually put on the very bottom inside your HTML element
     //Anythig in the script tag will execute the moment the HTML is loaded by the browser
