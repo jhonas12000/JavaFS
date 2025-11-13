@@ -152,4 +152,7 @@ let User = (() => {
 })();
 let bytefer = new User();
 bytefer.greet();
+// console.log(GetAllMovies());
+GetAllMovies().forEach(element => { console.log(element); });
+console.log(GetTitles('George Lucas'));
 //# sourceMappingURL=app.js.map

@@ -104,8 +104,9 @@ let distance: number = myRide2.go(100);
 console.log("distance traveled:", distance)
 
 // union type, can be helicopter or vehicle
-let myNewThing: Helicopter | Vehicle = new Helicopter();
-(myNewThing as Helicopter).land()
+let myNewThing:  Helicopter | Vehicle = new Helicopter();
+
+// (myNewThing as Helicopter).land()
 
 let x:number |string |boolean | Object | Function |any |undefined;
 x="one"

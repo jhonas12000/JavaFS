@@ -1,4 +1,4 @@
-import {Movie} from "./interfaces";
+import {Movie, FavoriteItem } from "./interfaces";
 
 export function GetAllMovies(): Movie[] {
     return [
@@ -86,7 +86,8 @@ else{
     console.log(`Rating:${movieReview}/10`);
 }
 
-
+//in ts declare one or more overload signatures then provide
+// a single implementation that can handle all those cases
 
 export function GetTitles(director: string): string[];
 export function GetTitles(director: string, streaming: boolean): string[];
@@ -132,3 +133,20 @@ let bytefer = new User();
 (bytefer as any).greet();
 
 
+// console.log(GetAllMovies());
+GetAllMovies().forEach(element => {console.log(element)});
+console.log(GetTitles('George Lucas'));
+
+let books: FavoriteItem[]=[
+    {title: "The Hobbit"},
+    {title: "1984"},
+    {title: "Dune"},
+    {title: "Foundation"},
+    {title: "Snow Crash"}
+]
+
+books.forEach(item=>console.log(item.title));
+
+let purgedBooks = Purge<FavoriteItem>(books);
+console.log("Purged Books");
+purgedBooks.forEach(item=>console.log(item.title));
