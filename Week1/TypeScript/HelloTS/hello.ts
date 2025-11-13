@@ -36,5 +36,8 @@ class Person {
 }
 
 //Usage 
-const person = new Person("Alice",30);
-console.log(person.toString());
+const person1 = new Person("Alice",30);
+console.log(person1.toString());
+person1.name = "Will"
+person1.age=31
+console.log(person1.toString());
