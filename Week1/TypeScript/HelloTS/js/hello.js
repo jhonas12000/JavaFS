@@ -30,3 +30,4 @@ console.log(person1.toString());
 person1.name = "Will";
 person1.age = 31;
 console.log(person1.toString());
+//# sourceMappingURL=hello.js.map
