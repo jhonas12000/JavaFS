@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { FirstComponent } from './Components/FirstComponent/FirstComponent';
+import { ParentComponent } from './Components/ParentComponent/ParentComponent';
 
 /* The App.tsx is the root of out app (at least when it comes to rendering stuff on the page)
 Most of the code we write will go elsewhere in the src folder, but the App.tsx cntrols WHAT gets rendered
@@ -22,6 +23,7 @@ function App() {
         <h3>React will reload the webpage with every saved change to the App</h3>
       </header>
       <FirstComponent></FirstComponent>
+      <ParentComponent></ParentComponent>
     </div>
 
     
