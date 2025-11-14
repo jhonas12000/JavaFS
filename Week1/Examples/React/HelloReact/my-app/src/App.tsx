@@ -23,7 +23,7 @@ function App() {
         <h3>React will reload the webpage with every saved change to the App</h3>
       </header>
       <FirstComponent></FirstComponent>
-      <ParentComponent></ParentComponent>
+      <ParentComponent/>
     </div>
 
     
