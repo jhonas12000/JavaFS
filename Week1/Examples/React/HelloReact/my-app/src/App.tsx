@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { FirstComponent } from './Components/FirstComponent/FirstComponent';
 
 /* The App.tsx is the root of out app (at least when it comes to rendering stuff on the page)
 Most of the code we write will go elsewhere in the src folder, but the App.tsx cntrols WHAT gets rendered
@@ -20,6 +21,7 @@ function App() {
         <p> We are writing in TSX, which is like HTML for React TS</p>
         <h3>React will reload the webpage with every saved change to the App</h3>
       </header>
+      <FirstComponent></FirstComponent>
     </div>
 
     
