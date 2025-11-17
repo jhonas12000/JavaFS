@@ -4,15 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { EmployeeContainer } from './Components/EmployeeComponent/EmployeeContainer'
 import { data } from './employeeData'
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
 
 
   return (
-    <div>
-<EmployeeContainer incomingData={data}/>
+    <div className="App">
+      <BrowserRouter><Routes>
+        <Route path="/emp" element={<EmployeeContainer incomingData={data}/>}></Route>
+        </Routes>
+        </BrowserRouter>
+
 </div>
   )
 }
 
-export default App
+export default App;
