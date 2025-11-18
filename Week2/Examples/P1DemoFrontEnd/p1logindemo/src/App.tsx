@@ -7,6 +7,7 @@ import { GameTable } from './Components/Games/GameTable'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Register } from './Components/LoginRegister/Register'
 import { Login } from './Components/LoginRegister/Login'
+import { UserTable } from './Components/User/UserTable'
 //^THIS IS A REQUIRED MANUAL IMPORT FOR BOOTSTRAP TO WORK!!!!
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="" element={<Login />} />
         <Route path="games" element={<GameTable />} />
         <Route path="register" element={<Register />} />
+        <Route path="users" element={<UserTable/>}/>
 
       </Routes>
       </BrowserRouter>

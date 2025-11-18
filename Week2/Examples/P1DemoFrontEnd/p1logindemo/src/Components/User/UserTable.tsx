@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import type { User } from "../../Interfaces/User"
-import { Container, Table } from "react-bootstrap"
+import { Button, Container, Table } from "react-bootstrap"
 
 
 export const UserTable: React.FC = () => {
@@ -52,7 +52,7 @@ export const UserTable: React.FC = () => {
         <div>
             <Container className="d-flex flex-column align-items-center mt-3">
                 <h3>Users:</h3>
-                <Table className="table-dark table-hover tabled-striped w-50">
+                <Table className="table-hover tabled-striped w-50">
                     <thead>
                         <tr>
                             <th>User Id</th>
@@ -64,12 +64,17 @@ export const UserTable: React.FC = () => {
                     <tbody className="table-seconday">
                         {users.map((user:User)=>(
                     <tr key={user.userId}>
-                    <td key={user.userId}/>
-                    <td key={user.username}/>
-                    <td key={user.role}/>
+                    <td> {user.userId}</td>
+                    <td> {user.username}</td>
+                    <td>{user.role}</td>
+                    <td>
+                        <Button variant="outline success" onClick={()=>updateUser(user)}>Promote</Button>
+                        <Button variant="outline danger" onClick={()=>updateUser(user)}>Fire</Button>
+                    </td>
                     </tr>
                         ))}
                     </tbody>
+                    
                 </Table>
                 
             </Container>
