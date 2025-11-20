@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- JDBC connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">p4ssword</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Schema -->
+        <property name="hibernate.default_schema">hibernate</property>
+
+        <!-- Hibernate behavior -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">create</property>
+<!--        create will DROP all tables and re-create every time application starts while
+update does not drop every time and modifies existing schema only if needed-->
+
+        <!-- C3P0 connection pool (optional and recommended) -->
+<!--        <property name="hibernate.c3p0.min_size">5</property>-->
+<!--        <property name="hibernate.c3p0.max_size">20</property>-->
+<!--        <property name="hibernate.c3p0.timeout">300</property>-->
+<!--        <property name="hibernate.c3p0.max_statements">50</property>-->
+
+        <!-- Mapped classes -->
+        <!-- Add your annotated entity classes here -->
+        <mapping class="org.example.models.Book"/>
+        <mapping class="org.example.models.Author"/>
+
+
+    </session-factory>
+</hibernate-configuration>
